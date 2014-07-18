@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UnderscoreJS Homework - Tasks 6</title>
+    <script src="underscore.js"></script>
+</head>
+<body>
+    <script>
+        /*
+            6. By a given collection of books, find the most popular author (the author with the highest number of books)
+        */
+		
+        var books = [{
+            title: "Book Title 1",
+            author: "Author A"
+        }, {
+            title: "Book Title 2",
+            author: "Author B"
+        }, {
+            title: "Book Title 3",
+            author: "Author A"
+        }, {
+            title: "Book Title 4",
+            author: "Author C"
+        }, {
+            title: "Book Title 5",
+            author: "Author A"
+        }, {
+            title: "Book Title 6",
+            author: "Author D"
+        }, {
+            title: "Book Title 7",
+            author: "Author E"
+        }, {
+            title: "Book Title 8",
+            author: "Author F"
+        }, {
+            title: "Book Title 9",
+            author: "Author A"
+        }, {
+            title: "Book Title 10",
+            author: "Author J"
+        }, {
+            title: "Book Title 11",
+            author: "Author H"
+        }, ];
+       
+        // Find most popular author
+        var mostPopularAuthor = _.chain(books)
+                                 .groupBy("author")
+                                 .max(function (item) {
+                                     return item.length;
+                                 })
+                                 .first()
+                                 .value()
+                                 .author;
+
+        console.log(mostPopularAuthor);
+
+    </script>
+</body>
+</html>

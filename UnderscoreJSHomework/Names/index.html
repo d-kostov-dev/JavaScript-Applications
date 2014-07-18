@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UnderscoreJS Homework - Tasks 7</title>
+    <script src="underscore.js"></script>
+</head>
+<body>
+    <script>
+        /*
+            7. By an array of people find the most common first and last name.
+        */
+       
+        var people = [{
+            firstName: "Pesho",
+            lastName: "Goshov"
+        }, {
+            firstName: "Pesho",
+            lastName: "Ivanov"
+        }, {
+            firstName: "Pesho",
+            lastName: "Petrov"
+        }, {
+            firstName: "Ivan",
+            lastName: "Goshov"
+        }, {
+            firstName: "Gosho",
+            lastName: "Goshov"
+        }, {
+            firstName: "Stamat",
+            lastName: "Goshov"
+        }, {
+            firstName: "Kencho",
+            lastName: "Ivaylov"
+        }, {
+            firstName: "Mincho",
+            lastName: "Donkov"
+        }, {
+            firstName: "Kosta",
+            lastName: "Nikolov"
+        }, {
+            firstName: "Gosho",
+            lastName: "Peshov"
+        }, ];
+
+        // Top first name
+        var countedFirstNames = _.chain(people)
+                                 .groupBy("firstName")
+                                 .max(function (item) {
+                                     return item.length;
+                                 })
+                                 .first()
+                                 .value()
+                                 .firstName;
+
+        console.log(countedFirstNames);
+
+        // Top last name
+        var countedLastNames = _.chain(people)
+                                 .groupBy("lastName")
+                                 .max(function (item) {
+                                     return item.length;
+                                 })
+                                 .first()
+                                 .value()
+                                 .lastName;
+
+        console.log(countedLastNames);
+    </script>
+</body>
+</html>

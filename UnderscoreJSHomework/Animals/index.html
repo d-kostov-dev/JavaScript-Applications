@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UnderscoreJS Homework - Tasks 4 and 5</title>
+    <script src="underscore.js"></script>
+</head>
+<body>
+    <script>
+        /*
+            4. Write a function that by a given array of animals, groups them by species and sorts them by number of legs.
+            5. By a given array of animals, find the total number of legs
+                Each animal can have 2, 4, 6, 8 or 100 legs
+        */
+
+        var animals = [{
+            specie: "Bird",
+            type: "Eagle",
+            numberOfLegs: 2
+        }, {
+            specie: "Bird",
+            type: "Raven",
+            numberOfLegs: 2
+        }, {
+            specie: "Mammal",
+            type: "Cow",
+            numberOfLegs: 4
+        }, {
+            specie: "Mammal",
+            type: "Human",
+            numberOfLegs: 2
+        }, {
+            specie: "Mammal",
+            type: "Cat",
+            numberOfLegs: 4
+        }, {
+            specie: "Mammal",
+            type: "Dog",
+            numberOfLegs: 4
+        }, {
+            specie: "Reptile",
+            type: "Aligator",
+            numberOfLegs: 4
+        }, {
+            specie: "Reptile",
+            type: "Lizard",
+            numberOfLegs: 4
+        }, {
+            specie: "Reptile",
+            type: "Turtle",
+            numberOfLegs: 4
+        }, {
+            specie: "Insect",
+            type: "Ant",
+            numberOfLegs: 6
+        }, {
+            specie: "Insect",
+            type: "Centipede",
+            numberOfLegs: 100
+        }, {
+            specie: "Insect",
+            type: "Bee",
+            numberOfLegs: 6
+        }, {
+            specie: "Insect",
+            type: "Fly",
+            numberOfLegs: 6
+        }, {
+            specie: "Insect",
+            type: "Cockroach",
+            numberOfLegs: 6
+        }, {
+            specie: "Arachnid",
+            type: "Acar",
+            numberOfLegs: 8
+        }, {
+            specie: "Arachnid",
+            type: "Spider",
+            numberOfLegs: 8
+        }, {
+            specie: "Arachnid",
+            type: "Thelyphonida",
+            numberOfLegs: 8
+        }];
+
+        // Sort and group with chaining
+        var filteredAnimals = _.chain(animals)
+                                .groupBy("specie")
+                                .map(function (item) {
+                                    var sortedItem = _.sortBy(item, function (subItem) {
+                                        return subItem.numberOfLegs;
+                                    })
+
+                                    return sortedItem;
+                                }).value();
+
+        console.log(filteredAnimals);
+
+        // Count Total Legs
+        var totalNumberOfLegs = 0;
+
+        _.each(animals, function (item) {
+            totalNumberOfLegs += item.numberOfLegs;
+        });
+
+        console.log(totalNumberOfLegs);
+    </script>
+</body>
+</html>

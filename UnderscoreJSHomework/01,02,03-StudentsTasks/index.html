@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UnderscoreJS Homework - Tasks 1, 2 and 3</title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <script src="scripts/libs/require.js" data-main="scripts/app"></script>
+</head>
+<body>
+    <script>
+        /*
+        1. Write a method that from a given array of students finds all students whose first name is before its last name alphabetically. Print the students in descending order by full name.        2. Write function that finds the first name and last name of all students with age between 18 and 24. 
+        3. Write a function that by a given array of students finds the student with highest marks.
+        */
+    </script>
+
+    <button data-info="firstBeforeLast">Show only first name before last</button>
+    <button data-info="filterByAge">Show between 18 and 24</button>
+    <button data-info="bestStudent">Show best student</button>
+
+    <div id="mainDiv" data-template="students-template"></div>
+
+    <script id="students-template" type="text/x-handlebars-template">
+        <div class="studentInfo">
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td>{{firstName}}</td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>{{lastName}}</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>{{age}}</td>
+                </tr>
+                <tr>
+                    <td>Marks</td>
+                    <td>{{marks}}</td>
+                </tr>
+            </table>
+        </div>
+    </script>
+</body>
+</html>
