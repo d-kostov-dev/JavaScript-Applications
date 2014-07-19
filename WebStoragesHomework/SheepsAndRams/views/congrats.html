@@ -9,7 +9,11 @@
     var scoreList = $("#highscore");
 
     var storageData = JSON.parse(localStorage.getItem("sarHighScore"));
-    
+
+    storageData.sort(function (a, b) {
+        return a.score - b.score;
+    });
+
     for (var i = 0; i < storageData.length; i++) {
         var currentData = storageData[i];
         scoreList.append("<li><span class='username'>Player: " + currentData.username + "</span> - <span class='score'>Score:" + currentData.score + "</span></li>")
