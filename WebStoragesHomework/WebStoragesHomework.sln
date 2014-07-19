@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SheepsAndRams", "SheepsAndRams\SheepsAndRams.csproj", "{A47BE456-E9DD-4A50-B486-E015C9A721B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeTesting-IGNORE", "SomeTesting-IGNORE\SomeTesting-IGNORE.csproj", "{D23B05DE-773B-463D-B5B6-433DFAB412D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A47BE456-E9DD-4A50-B486-E015C9A721B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A47BE456-E9DD-4A50-B486-E015C9A721B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A47BE456-E9DD-4A50-B486-E015C9A721B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D23B05DE-773B-463D-B5B6-433DFAB412D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D23B05DE-773B-463D-B5B6-433DFAB412D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D23B05DE-773B-463D-B5B6-433DFAB412D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D23B05DE-773B-463D-B5B6-433DFAB412D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

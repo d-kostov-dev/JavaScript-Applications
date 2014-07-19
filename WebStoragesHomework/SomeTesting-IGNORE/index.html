@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        localStorage.setItem("pesho", JSON.stringify([]));
+        console.log(localStorage);
+
+        var storageData = JSON.parse(localStorage.getItem("pesho"));
+        console.log(storageData)
+
+        storageData.push({ name: "asd" });
+        console.log(storageData)
+
+        localStorage.setItem("pesho", JSON.stringify(storageData));
+        console.log(localStorage)
+    </script>
+</body>
+</html>

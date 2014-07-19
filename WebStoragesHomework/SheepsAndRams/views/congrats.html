@@ -8,7 +8,15 @@
 <script>
     var scoreList = $("#highscore");
 
-    for (var key in localStorage) {
-        scoreList.append("<li><span class='username'>Player: " + key + "</span> - <span class='score'>Score:" + localStorage.getItem(key) + "</span></li>");
+    var storageData = JSON.parse(localStorage.getItem("sarHighScore"));
+    
+    for (var i = 0; i < storageData.length; i++) {
+        var currentData = storageData[i];
+        scoreList.append("<li><span class='username'>Player: " + currentData.username + "</span> - <span class='score'>Score:" + currentData.score + "</span></li>")
+
     }
+
+    //for (var key in localStorage) {
+    //    scoreList.append("<li><span class='username'>Player: " + key + "</span> - <span class='score'>Score:" + localStorage.getItem(key) + "</span></li>");
+    //}
 </script>

@@ -53,7 +53,7 @@
 
     // Checks if the username input is correct.
     function isValidName(name) {
-        if (typeof name === "string" && name.length < 12) {
+        if (typeof name === "string" && name.length > 3 && name.length < 12) {
             return true;
         }
 
@@ -66,11 +66,8 @@
 
         numberOfGuesses++;
 
-        console.log(numberOfGuesses);
-
         if (guessResult.ram === 4) {
-            localStorage.setItem(sessionStorage.getItem("username"), numberOfGuesses);
-            loadView("congrats.html")
+            finishGame();
         }
 
         resultToShow.append("<span></span>").html(guess.join(" "));
@@ -107,6 +104,24 @@
         }
 
         return result;
+    }
+
+    function finishGame() {
+        var storageData = JSON.parse(localStorage.getItem("sarHighScore"));
+
+        if (!storageData) {
+            localStorage.setItem("sarHighScore", JSON.stringify([]));
+            storageData = JSON.parse(localStorage.getItem("sarHighScore"));
+        }
+
+        storageData.push({
+            username: sessionStorage.getItem("username"),
+            score: numberOfGuesses
+        });
+
+        localStorage.setItem("sarHighScore", JSON.stringify(storageData));
+
+        loadView("congrats.html")
     }
 
     return {

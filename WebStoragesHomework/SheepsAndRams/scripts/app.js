@@ -40,7 +40,7 @@
                     console.log(secretNumber);
                 } else {
                     nameInput.val("");
-                    alert("Please enter a valid name! Max 12 characters!")
+                    alert("Please enter a valid name! Min 4 characters and Max 12 characters!")
                 }
             }
 
