@@ -1,0 +1,14 @@
+﻿<div class="centered">
+    <img src="images/congrats.gif" />
+    <h1>CONGRATULATIONS</h1>
+    <h3>High Score</h3>
+    <ul id="highscore"></ul>
+</div>
+
+<script>
+    var scoreList = $("#highscore");
+
+    for (var key in localStorage) {
+        scoreList.append("<li><span class='username'>Player: " + key + "</span> - <span class='score'>Score:" + localStorage.getItem(key) + "</span></li>");
+    }
+</script>
