@@ -18,11 +18,11 @@
                 messageInfo[input.name] = input.value;
             });
 
-            addStudent();
+            addMessage();
         });
     }
 
-    function addStudent() {
+    function addMessage() {
         modules.request.post(url, JSON.stringify(messageInfo))
         .then(function () {
             modules.redirect("#/");
