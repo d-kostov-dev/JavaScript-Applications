@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Consuming Remote Data Homework - Task 1</title>
+    <script src="scripts/q.js"></script>
+    <script src="scripts/requestModule.js"></script>
+</head>
+<body>
+    <script>
+        /*
+            Create a module that exposes methods for performing HTTP requests by given URL and headers
+                getJSON and postJSON                Both methods should work with promises
+        */
+
+        HTTP.getJSON("http://localhost:3000/students")
+        .then(function (data) {
+            console.log(data);
+        }, function (error) {
+            console.log(error);
+        });
+    </script>
+</body>
+</html>

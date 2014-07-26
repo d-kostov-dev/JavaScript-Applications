@@ -1,0 +1,11 @@
+﻿<h1>List Of All Students</h1>
+
+<div id="studentsList" data-template="students-template"></div>
+
+<script id="students-template" type="text/x-mustache-template">
+    <div>
+        <span>Name:</span> <span>{{name}}</span>
+        <span>Grade:</span> <span>{{grade}}</span>
+        <a href="#/delete/{{id}}">Delete This Student</a>
+    </div>
+</script>
